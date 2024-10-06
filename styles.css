@@ -1,90 +1,119 @@
 * {
     padding: 0;
     margin: 0;
-    border: box;
 }
 
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: white;
 }
-.inicio_section {
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: aliceblue;
-    align-items: center;
+
+.fondo_principal img {
+    position: relative;
+    width: 204vh;
+}
+.section_principal {
+    background-color: aliceblue;
+    
+
+}
+
+.section_principal h1 {
+    position: absolute;
+    top: 13%; /* Ajusta la posición vertical */
+    left: 50%; /* Ajusta la posición horizontal */
+    transform: translate(-50%, -50%); /* Centra el texto */
+    color: white; /* Color del texto */
+    font-size: 2.5rem;
+    padding: 10px;
     text-align: center;
-    background-color: rgb(50, 47, 47);
+    font-family: Arial, Helvetica, sans-serif;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.description_principal {
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    position: absolute;
+    top: 19%; /* Ajusta la posición vertical */
+    left: 50%; /* Ajusta la posición horizontal */
+    transform: translate(-50%, -50%); /* Centra el texto */
     color: white;
-    animation: fadeIn 1s ease-in-out;
+    font-size: 1.2rem;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace
+
 }
 
-.Viendo_en_vivo {
-    height: 30vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #ccc;
-    align-items: center;
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+      }
+      40% {
+        opacity: 0.6;
+      }
+      100% {
+        opacity: 1;
+      }
 }
-.Viendo_en_vivo h2 {
+
+/* Estilo para el contenedor de las tarjetas */
+.ver_contenido {
+    display: flex; /* Distribución horizontal */
+    justify-content: space-around; /* Distribuye uniformemente */
+    align-items: center; /* Centra verticalmente */
+    padding: 20px;
+    background-color: #000000;
+}
+
+/* Estilo individual de cada tarjeta */
+.tarjeta {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px; /* Ancho fijo para las tarjetas */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover */
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo del botón */
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #ddff00;
     color: black;
-    align-content: center;
-}
-.Viendo_en_vivo img {
-    width: 200px;
-    align-items: center;
-    
-    
-}
-.Titulo {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-family: 'Arial';
-    opacity: 0;
-    animation: slideIn 2s forwards;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
-.Description {
-    font-size: 1.5rem;
-    font-family: 'Courier New';
-    margin-bottom: 100px;
-    color: #ddd;
-    animation: fadeIn 1S forwards 2s;
+button:hover {
+    background-color: #0056b3;
 }
 
-.Logo_liga1{
-    background-color: #ccc;
-    border-radius: 20px;
-    width: 200px;
-    display: flex;
-
+/* Estilo de las imágenes */
+.tarjeta img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-
-@keyframes slideIn {
-    0% {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    50% {
-        transform: translateY(0);
-        opacity: 0.5;
-        color: #ccc;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-        color: #fff;
-    }
+.titulo_programacion {
+    text-align: center; /* Alinea el contenido horizontalmente al centro */
+    padding: 20px;
+    background-color: black; /* Opcional: Añade un poco de espacio alrededor del texto */
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+.titulo_programacion h2 {
+    font-size: 2rem; /* Tamaño del texto */
+    color: #ffffff; /* Color del texto */
 }
